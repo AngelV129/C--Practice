@@ -32,6 +32,26 @@ struct Node* FindMin(struct Node* root){
 //Function to find Inorder Successor in a BST
 struct Node* Getsuccessor(struct Node* root,int data) {
     // Search the Node - O(h)
+
+    Node* current = Find(root,data);
+    if (current == nullptr) return nullptr;
+
+    // case 1node has a right subtree so find its min
+    else if (current->right != nullptr) return FindMin(current);
+
+    // case 2 No right subtree
+    // go to nearest ancestro were given node is in left subtree.
+    Node* successor = nullptr;
+    Node* ancestor = root;
+
+    while(ancestor != current){
+
+        if (current->data <= ancestor->data){
+            successor = ancestor; // so far this is the deepest node for which current node is in left.
+            ancestor = ancestor->left;
+        } else ancestor = ancestor->right;
+    }
+    return successor;
 }
 
 
@@ -80,4 +100,11 @@ int main(){
     std::cout<<"Inorder Traversal: ";
     Inorder(root);
     std::cout<<"\n";
+
+
+    // Find Inorder successor of some node.
+    struct Node* successor = Getsuccessor(root,1);
+    if(successor == NULL) std::cout<<"No successor Found\n";
+    else
+        std::cout<<"Successor is "<<successor->data<<"\n";
 }
