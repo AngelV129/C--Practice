@@ -141,6 +141,19 @@ firs_bst/fast:
 	$(MAKE) $(MAKESILENT) -f BST\first_bst\CMakeFiles\firs_bst.dir\build.make BST/first_bst/CMakeFiles/firs_bst.dir/build
 .PHONY : firs_bst/fast
 
+#=============================================================================
+# Target rules for targets named InorderSuccsessor
+
+# Build rule for target.
+InorderSuccsessor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 InorderSuccsessor
+.PHONY : InorderSuccsessor
+
+# fast build rule for target.
+InorderSuccsessor/fast:
+	$(MAKE) $(MAKESILENT) -f BST\InorderSuccsessor\CMakeFiles\InorderSuccsessor.dir\build.make BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/build
+.PHONY : InorderSuccsessor/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -149,6 +162,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... InorderSuccsessor
 	@echo ... firs_bst
 .PHONY : help
 

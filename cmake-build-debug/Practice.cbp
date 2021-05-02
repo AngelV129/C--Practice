@@ -5,7 +5,7 @@
 		<Option title="Practice"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\BST\;CMake Files\BST\first_bst\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\BST\;CMake Files\BST\first_bst\;CMake Files\BST\InorderSuccsessor\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug"/>
@@ -79,7 +79,52 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/first_bst/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="InorderSuccsessor">
+				<Option output="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/InorderSuccsessor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 InorderSuccsessor"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InorderSuccsessor/fast">
+				<Option output="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/InorderSuccsessor.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 InorderSuccsessor/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/BST/InorderSuccsessor/InorderSuccessor.cpp">
+			<Option target="InorderSuccsessor"/>
+		</Unit>
 		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/BST/first_bst/main.cpp">
 			<Option target="firs_bst"/>
 		</Unit>
@@ -88,6 +133,9 @@
 		</Unit>
 		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/BST/first_bst/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\BST\first_bst\"/>
+		</Unit>
+		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/BST/InorderSuccsessor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BST\InorderSuccsessor\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

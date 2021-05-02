@@ -72,18 +72,39 @@ CMAKE_BINARY_DIR = "C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-
 
 # The main recursive "all" target.
 all: BST/first_bst/all
+all: BST/InorderSuccsessor/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: BST/first_bst/preinstall
+preinstall: BST/InorderSuccsessor/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: BST/first_bst/clean
+clean: BST/InorderSuccsessor/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory BST/InorderSuccsessor
+
+# Recursive "all" directory target.
+BST/InorderSuccsessor/all: BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/all
+
+.PHONY : BST/InorderSuccsessor/all
+
+# Recursive "preinstall" directory target.
+BST/InorderSuccsessor/preinstall:
+
+.PHONY : BST/InorderSuccsessor/preinstall
+
+# Recursive "clean" directory target.
+BST/InorderSuccsessor/clean: BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/clean
+
+.PHONY : BST/InorderSuccsessor/clean
 
 #=============================================================================
 # Directory level rules for directory BST/first_bst
@@ -110,7 +131,7 @@ BST/first_bst/clean: BST/first_bst/CMakeFiles/firs_bst.dir/clean
 BST/first_bst/CMakeFiles/firs_bst.dir/all:
 	$(MAKE) $(MAKESILENT) -f BST\first_bst\CMakeFiles\firs_bst.dir\build.make BST/first_bst/CMakeFiles/firs_bst.dir/depend
 	$(MAKE) $(MAKESILENT) -f BST\first_bst\CMakeFiles\firs_bst.dir\build.make BST/first_bst/CMakeFiles/firs_bst.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target firs_bst"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=3,4 "Built target firs_bst"
 .PHONY : BST/first_bst/CMakeFiles/firs_bst.dir/all
 
 # Build rule for subdir invocation for target.
@@ -129,6 +150,33 @@ firs_bst: BST/first_bst/CMakeFiles/firs_bst.dir/rule
 BST/first_bst/CMakeFiles/firs_bst.dir/clean:
 	$(MAKE) $(MAKESILENT) -f BST\first_bst\CMakeFiles\firs_bst.dir\build.make BST/first_bst/CMakeFiles/firs_bst.dir/clean
 .PHONY : BST/first_bst/CMakeFiles/firs_bst.dir/clean
+
+#=============================================================================
+# Target rules for target BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir
+
+# All Build rule for target.
+BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/all:
+	$(MAKE) $(MAKESILENT) -f BST\InorderSuccsessor\CMakeFiles\InorderSuccsessor.dir\build.make BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/depend
+	$(MAKE) $(MAKESILENT) -f BST\InorderSuccsessor\CMakeFiles\InorderSuccsessor.dir\build.make BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target InorderSuccsessor"
+.PHONY : BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/all
+
+# Build rule for subdir invocation for target.
+BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" 0
+.PHONY : BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/rule
+
+# Convenience name for target.
+InorderSuccsessor: BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/rule
+
+.PHONY : InorderSuccsessor
+
+# clean rule for target.
+BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f BST\InorderSuccsessor\CMakeFiles\InorderSuccsessor.dir\build.make BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/clean
+.PHONY : BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

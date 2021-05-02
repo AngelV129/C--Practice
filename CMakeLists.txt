@@ -4,3 +4,4 @@ project(Practice)
 set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory("${PROJECT_SOURCE_DIR}/BST/first_bst")
+add_subdirectory("${PROJECT_SOURCE_DIR}/BST/InorderSuccsessor")

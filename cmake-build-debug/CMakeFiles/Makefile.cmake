@@ -31,6 +31,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2021.1/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows.cmake"
   "C:/Program Files/JetBrains/CLion 2021.1/bin/cmake/win/share/cmake-3.19/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/JetBrains/CLion 2021.1/bin/cmake/win/share/cmake-3.19/Modules/ProcessorCount.cmake"
+  "../BST/InorderSuccsessor/CMakeLists.txt"
   "../BST/first_bst/CMakeLists.txt"
   "../CMakeLists.txt"
   "CMakeFiles/3.19.2/CMakeCCompiler.cmake"
@@ -49,9 +50,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "BST/first_bst/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "BST/InorderSuccsessor/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "BST/first_bst/CMakeFiles/firs_bst.dir/DependInfo.cmake"
+  "BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/DependInfo.cmake"
   )
