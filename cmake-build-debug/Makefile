@@ -154,6 +154,19 @@ InorderSuccsessor/fast:
 	$(MAKE) $(MAKESILENT) -f BST\InorderSuccsessor\CMakeFiles\InorderSuccsessor.dir\build.make BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir/build
 .PHONY : InorderSuccsessor/fast
 
+#=============================================================================
+# Target rules for targets named Heap-Sort
+
+# Build rule for target.
+Heap-Sort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Heap-Sort
+.PHONY : Heap-Sort
+
+# fast build rule for target.
+Heap-Sort/fast:
+	$(MAKE) $(MAKESILENT) -f Heap-Sort\CMakeFiles\Heap-Sort.dir\build.make Heap-Sort/CMakeFiles/Heap-Sort.dir/build
+.PHONY : Heap-Sort/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -162,6 +175,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Heap-Sort
 	@echo ... InorderSuccsessor
 	@echo ... firs_bst
 .PHONY : help

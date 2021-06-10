@@ -6,3 +6,6 @@ C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/first_bst/
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/CMakeFiles/InorderSuccsessor.dir
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/CMakeFiles/edit_cache.dir
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuccsessor/CMakeFiles/rebuild_cache.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Heap-Sort/CMakeFiles/Heap-Sort.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Heap-Sort/CMakeFiles/edit_cache.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Heap-Sort/CMakeFiles/rebuild_cache.dir
