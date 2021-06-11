@@ -9,3 +9,6 @@ C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/InorderSuc
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Heap-Sort/CMakeFiles/Heap-Sort.dir
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Heap-Sort/CMakeFiles/edit_cache.dir
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Heap-Sort/CMakeFiles/rebuild_cache.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/QuickSort/CMakeFiles/edit_cache.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/QuickSort/CMakeFiles/QuickSort.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/QuickSort/CMakeFiles/rebuild_cache.dir

@@ -167,6 +167,19 @@ Heap-Sort/fast:
 	$(MAKE) $(MAKESILENT) -f Heap-Sort\CMakeFiles\Heap-Sort.dir\build.make Heap-Sort/CMakeFiles/Heap-Sort.dir/build
 .PHONY : Heap-Sort/fast
 
+#=============================================================================
+# Target rules for targets named QuickSort
+
+# Build rule for target.
+QuickSort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 QuickSort
+.PHONY : QuickSort
+
+# fast build rule for target.
+QuickSort/fast:
+	$(MAKE) $(MAKESILENT) -f Sorts\QuickSort\CMakeFiles\QuickSort.dir\build.make Sorts/QuickSort/CMakeFiles/QuickSort.dir/build
+.PHONY : QuickSort/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -177,6 +190,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Heap-Sort
 	@echo ... InorderSuccsessor
+	@echo ... QuickSort
 	@echo ... firs_bst
 .PHONY : help
 
