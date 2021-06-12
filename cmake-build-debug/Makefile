@@ -180,6 +180,19 @@ QuickSort/fast:
 	$(MAKE) $(MAKESILENT) -f Sorts\QuickSort\CMakeFiles\QuickSort.dir\build.make Sorts/QuickSort/CMakeFiles/QuickSort.dir/build
 .PHONY : QuickSort/fast
 
+#=============================================================================
+# Target rules for targets named Merge_Sort
+
+# Build rule for target.
+Merge_Sort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Merge_Sort
+.PHONY : Merge_Sort
+
+# fast build rule for target.
+Merge_Sort/fast:
+	$(MAKE) $(MAKESILENT) -f Sorts\Merge_Sort\CMakeFiles\Merge_Sort.dir\build.make Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/build
+.PHONY : Merge_Sort/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -190,6 +203,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Heap-Sort
 	@echo ... InorderSuccsessor
+	@echo ... Merge_Sort
 	@echo ... QuickSort
 	@echo ... firs_bst
 .PHONY : help

@@ -75,6 +75,7 @@ all: BST/first_bst/all
 all: BST/InorderSuccsessor/all
 all: Heap-Sort/all
 all: Sorts/QuickSort/all
+all: Sorts/Merge_Sort/all
 
 .PHONY : all
 
@@ -83,6 +84,7 @@ preinstall: BST/first_bst/preinstall
 preinstall: BST/InorderSuccsessor/preinstall
 preinstall: Heap-Sort/preinstall
 preinstall: Sorts/QuickSort/preinstall
+preinstall: Sorts/Merge_Sort/preinstall
 
 .PHONY : preinstall
 
@@ -91,6 +93,7 @@ clean: BST/first_bst/clean
 clean: BST/InorderSuccsessor/clean
 clean: Heap-Sort/clean
 clean: Sorts/QuickSort/clean
+clean: Sorts/Merge_Sort/clean
 
 .PHONY : clean
 
@@ -149,6 +152,24 @@ Heap-Sort/clean: Heap-Sort/CMakeFiles/Heap-Sort.dir/clean
 .PHONY : Heap-Sort/clean
 
 #=============================================================================
+# Directory level rules for directory Sorts/Merge_Sort
+
+# Recursive "all" directory target.
+Sorts/Merge_Sort/all: Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/all
+
+.PHONY : Sorts/Merge_Sort/all
+
+# Recursive "preinstall" directory target.
+Sorts/Merge_Sort/preinstall:
+
+.PHONY : Sorts/Merge_Sort/preinstall
+
+# Recursive "clean" directory target.
+Sorts/Merge_Sort/clean: Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/clean
+
+.PHONY : Sorts/Merge_Sort/clean
+
+#=============================================================================
 # Directory level rules for directory Sorts/QuickSort
 
 # Recursive "all" directory target.
@@ -173,7 +194,7 @@ Sorts/QuickSort/clean: Sorts/QuickSort/CMakeFiles/QuickSort.dir/clean
 BST/first_bst/CMakeFiles/firs_bst.dir/all:
 	$(MAKE) $(MAKESILENT) -f BST\first_bst\CMakeFiles\firs_bst.dir\build.make BST/first_bst/CMakeFiles/firs_bst.dir/depend
 	$(MAKE) $(MAKESILENT) -f BST\first_bst\CMakeFiles\firs_bst.dir\build.make BST/first_bst/CMakeFiles/firs_bst.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=7,8 "Built target firs_bst"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=9,10 "Built target firs_bst"
 .PHONY : BST/first_bst/CMakeFiles/firs_bst.dir/all
 
 # Build rule for subdir invocation for target.
@@ -254,7 +275,7 @@ Heap-Sort/CMakeFiles/Heap-Sort.dir/clean:
 Sorts/QuickSort/CMakeFiles/QuickSort.dir/all:
 	$(MAKE) $(MAKESILENT) -f Sorts\QuickSort\CMakeFiles\QuickSort.dir\build.make Sorts/QuickSort/CMakeFiles/QuickSort.dir/depend
 	$(MAKE) $(MAKESILENT) -f Sorts\QuickSort\CMakeFiles\QuickSort.dir\build.make Sorts/QuickSort/CMakeFiles/QuickSort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=5,6 "Built target QuickSort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=7,8 "Built target QuickSort"
 .PHONY : Sorts/QuickSort/CMakeFiles/QuickSort.dir/all
 
 # Build rule for subdir invocation for target.
@@ -273,6 +294,33 @@ QuickSort: Sorts/QuickSort/CMakeFiles/QuickSort.dir/rule
 Sorts/QuickSort/CMakeFiles/QuickSort.dir/clean:
 	$(MAKE) $(MAKESILENT) -f Sorts\QuickSort\CMakeFiles\QuickSort.dir\build.make Sorts/QuickSort/CMakeFiles/QuickSort.dir/clean
 .PHONY : Sorts/QuickSort/CMakeFiles/QuickSort.dir/clean
+
+#=============================================================================
+# Target rules for target Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir
+
+# All Build rule for target.
+Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/all:
+	$(MAKE) $(MAKESILENT) -f Sorts\Merge_Sort\CMakeFiles\Merge_Sort.dir\build.make Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/depend
+	$(MAKE) $(MAKESILENT) -f Sorts\Merge_Sort\CMakeFiles\Merge_Sort.dir\build.make Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" --progress-num=5,6 "Built target Merge_Sort"
+.PHONY : Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/all
+
+# Build rule for subdir invocation for target.
+Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Jose\Documents\C++\CS 136 C++\Practice\cmake-build-debug\CMakeFiles" 0
+.PHONY : Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/rule
+
+# Convenience name for target.
+Merge_Sort: Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/rule
+
+.PHONY : Merge_Sort
+
+# clean rule for target.
+Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Sorts\Merge_Sort\CMakeFiles\Merge_Sort.dir\build.make Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/clean
+.PHONY : Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

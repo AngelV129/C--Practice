@@ -35,6 +35,7 @@ int main(){
 template<std::size_t SIZE>
 int partition(std::array<int, SIZE>& array, int start, int end){
 
+    std::cout << "pppp\n";
     // make the far right element the pivot.
     int pivot = array[end];
 

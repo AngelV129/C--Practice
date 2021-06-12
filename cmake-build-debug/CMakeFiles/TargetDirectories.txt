@@ -12,3 +12,6 @@ C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Heap-Sort/CMak
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/QuickSort/CMakeFiles/edit_cache.dir
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/QuickSort/CMakeFiles/QuickSort.dir
 C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/QuickSort/CMakeFiles/rebuild_cache.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/Merge_Sort/CMakeFiles/edit_cache.dir
+C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/Merge_Sort/CMakeFiles/rebuild_cache.dir
