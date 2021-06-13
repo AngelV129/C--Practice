@@ -6,11 +6,91 @@
 #include <iostream>
 #include <queue>
 
+
 struct BSTNode{
     int data;
     BSTNode* left;
     BSTNode* right;
 };
+
+BSTNode* CreateNode(int data);
+bool Search(BSTNode* root, int data);
+void Insert(BSTNode*& root, int data);
+void insert(BSTNode*& root, int data);
+BSTNode* deleteNode(BSTNode* root, int data);
+BSTNode* FindMin(struct BSTNode* root);
+void deleteNode();
+struct Node* Getsuccessor(struct Node* root,int data);
+
+
+
+int main(){
+
+    std::cout << "TEsting\n";
+
+    BSTNode* root; // pointer to root node.
+    root = nullptr;
+
+    insert(root, 15);
+    insert(root, 10);
+    insert(root, 20);
+    insert(root, 25);
+    insert(root, 8);
+    insert(root, 12);
+    std::cout << root->data << '\n';
+
+
+
+    int number=15;
+//    std::cin >> number;
+//    if (Search(root,number) == true) std::cout << "Found\n";
+//    else std::cout << "Not Found\n";
+
+
+    return 0;
+}
+
+BSTNode* deleteNode(BSTNode* root, int data){
+    // base case
+    if (root == nullptr) return root;
+    // look for the value
+    if (data < root->data) root->left = deleteNode(root->left, data);
+    if (data > root->data) root->right = deleteNode(root->right, data);
+    else{
+        // found the value
+
+        // case 1: no child
+        if (root->left == nullptr && root->right == nullptr){
+            delete root;
+            root = nullptr;
+        }
+
+        // case 2: one child
+        else if (root->left == nullptr ){
+            // get the right node value tree
+            BSTNode* tmp = root;
+            root =root->right;
+            delete tmp;
+        }
+        else if (root->right == nullptr)
+        {
+            BSTNode* tmp = root;
+            root = root->left;
+            delete tmp;
+        }
+
+        // case 3: two children
+        else {
+            BSTNode* tmp = FindMin(root-> right);
+            root->data = tmp->data;
+            root->right = deleteNode(root->right, root->data);
+
+        }
+
+    }
+
+}
+
 
 BSTNode* CreateNode(int data){
     BSTNode* newNode = new BSTNode{};
@@ -41,6 +121,16 @@ void Insert(BSTNode*& root, int data){ // Or do pointer to pointer instead of do
         Insert(root->right, data);
     }
     return;
+}
+
+BSTNode* FindMin(BSTNode* root){
+
+    if (root == nullptr) return root;
+
+    while (root->left != nullptr){
+        root = root->left;
+    }
+    return root;
 }
 
 // Inserts by looping
@@ -100,32 +190,3 @@ void deleteTree(BSTNode*& root){
     }
 
 }
-
-
-int main(){
-
-    std::cout << "TEsting\n";
-
-    BSTNode* root; // pointer to root node.
-    root = nullptr;
-
-    insert(root, 15);
-    insert(root, 10);
-    insert(root, 20);
-    insert(root, 25);
-    insert(root, 8);
-    insert(root, 12);
-    std::cout << root->data << '\n';
-
-    deleteTree(root);
-    std::cout << root->data << '\n';
-
-    int number=15;
-//    std::cin >> number;
-//    if (Search(root,number) == true) std::cout << "Found\n";
-//    else std::cout << "Not Found\n";
-
-
-    return 0;
-}
-
