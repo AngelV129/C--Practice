@@ -20,7 +20,7 @@ void insert(BSTNode*& root, int data);
 BSTNode* deleteNode(BSTNode* root, int data);
 BSTNode* FindMin(struct BSTNode* root);
 void deleteNode();
-struct Node* Getsuccessor(struct Node* root,int data);
+struct BSTNode* getsuccessor(struct Node* root,int data);
 
 
 
@@ -48,6 +48,10 @@ int main(){
 
 
     return 0;
+}
+
+struct BSTNode* getsuccessor(struct Node* root,int data){
+
 }
 
 BSTNode* deleteNode(BSTNode* root, int data){

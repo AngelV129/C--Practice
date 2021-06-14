@@ -193,6 +193,19 @@ Merge_Sort/fast:
 	$(MAKE) $(MAKESILENT) -f Sorts\Merge_Sort\CMakeFiles\Merge_Sort.dir\build.make Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/build
 .PHONY : Merge_Sort/fast
 
+#=============================================================================
+# Target rules for targets named PriorityQueueQuickRemoval
+
+# Build rule for target.
+PriorityQueueQuickRemoval: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PriorityQueueQuickRemoval
+.PHONY : PriorityQueueQuickRemoval
+
+# fast build rule for target.
+PriorityQueueQuickRemoval/fast:
+	$(MAKE) $(MAKESILENT) -f PriorityQueueQuickRemoval\CMakeFiles\PriorityQueueQuickRemoval.dir\build.make PriorityQueueQuickRemoval/CMakeFiles/PriorityQueueQuickRemoval.dir/build
+.PHONY : PriorityQueueQuickRemoval/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -204,6 +217,7 @@ help:
 	@echo ... Heap-Sort
 	@echo ... InorderSuccsessor
 	@echo ... Merge_Sort
+	@echo ... PriorityQueueQuickRemoval
 	@echo ... QuickSort
 	@echo ... firs_bst
 .PHONY : help

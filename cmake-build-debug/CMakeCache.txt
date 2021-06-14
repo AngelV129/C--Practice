@@ -245,10 +245,10 @@ CMAKE_STRIP:FILEPATH=C:/MinGW/bin/strip.exe
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Practice_BINARY_DIR:STATIC=C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/Merge_Sort
+Practice_BINARY_DIR:STATIC=C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval
 
 //Value Computed by CMake
-Practice_SOURCE_DIR:STATIC=C:/Users/Jose/Documents/C++/CS 136 C++/Practice/Sorts/Merge_Sort
+Practice_SOURCE_DIR:STATIC=C:/Users/Jose/Documents/C++/CS 136 C++/Practice/PriorityQueueQuickRemoval
 
 
 ########################
@@ -363,7 +363,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

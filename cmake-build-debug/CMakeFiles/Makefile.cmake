@@ -35,6 +35,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../BST/first_bst/CMakeLists.txt"
   "../CMakeLists.txt"
   "../Heap-Sort/CMakeLists.txt"
+  "../PriorityQueueQuickRemoval/CMakeLists.txt"
   "../Sorts/Merge_Sort/CMakeLists.txt"
   "../Sorts/QuickSort/CMakeLists.txt"
   "CMakeFiles/3.19.2/CMakeCCompiler.cmake"
@@ -57,6 +58,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Heap-Sort/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Sorts/QuickSort/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Sorts/Merge_Sort/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "PriorityQueueQuickRemoval/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -66,4 +68,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "Heap-Sort/CMakeFiles/Heap-Sort.dir/DependInfo.cmake"
   "Sorts/QuickSort/CMakeFiles/QuickSort.dir/DependInfo.cmake"
   "Sorts/Merge_Sort/CMakeFiles/Merge_Sort.dir/DependInfo.cmake"
+  "PriorityQueueQuickRemoval/CMakeFiles/PriorityQueueQuickRemoval.dir/DependInfo.cmake"
   )

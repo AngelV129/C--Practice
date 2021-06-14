@@ -5,7 +5,7 @@
 		<Option title="Practice"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\BST\;CMake Files\BST\first_bst\;CMake Files\BST\InorderSuccsessor\;CMake Files\Heap-Sort\;CMake Files\Sorts\;CMake Files\Sorts\QuickSort\;CMake Files\Sorts\Merge_Sort\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\BST\;CMake Files\BST\first_bst\;CMake Files\BST\InorderSuccsessor\;CMake Files\Heap-Sort\;CMake Files\Sorts\;CMake Files\Sorts\QuickSort\;CMake Files\Sorts\Merge_Sort\;CMake Files\PriorityQueueQuickRemoval\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug"/>
@@ -247,6 +247,48 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/Sorts/Merge_Sort/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="PriorityQueueQuickRemoval">
+				<Option output="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/PriorityQueueQuickRemoval.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 PriorityQueueQuickRemoval"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PriorityQueueQuickRemoval/fast">
+				<Option output="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/PriorityQueueQuickRemoval.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 PriorityQueueQuickRemoval/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/PriorityQueueQuickRemoval/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/BST/InorderSuccsessor/InorderSuccessor.cpp">
 			<Option target="InorderSuccsessor"/>
@@ -256,6 +298,15 @@
 		</Unit>
 		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/Heap-Sort/Heap_Sort.cpp">
 			<Option target="Heap-Sort"/>
+		</Unit>
+		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/PriorityQueueQuickRemoval/HeapQuickremovalDriver.cpp">
+			<Option target="PriorityQueueQuickRemoval"/>
+		</Unit>
+		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/PriorityQueueQuickRemoval/MaxHeap.cpp">
+			<Option target="PriorityQueueQuickRemoval"/>
+		</Unit>
+		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/PriorityQueueQuickRemoval/MaxHeap.h">
+			<Option target="PriorityQueueQuickRemoval"/>
 		</Unit>
 		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/Sorts/Merge_Sort/MergeSort.cpp">
 			<Option target="Merge_Sort"/>
@@ -280,6 +331,9 @@
 		</Unit>
 		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/Sorts/Merge_Sort/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Sorts\Merge_Sort\"/>
+		</Unit>
+		<Unit filename="C:/Users/Jose/Documents/C++/CS 136 C++/Practice/PriorityQueueQuickRemoval/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\PriorityQueueQuickRemoval\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
