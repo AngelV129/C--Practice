@@ -29,7 +29,7 @@ MaxHeap<T>::MaxHeap(T *elems, size_t arrySize) {
 template<typename T>
 void MaxHeap<T>::mapAdd(T value, int index) {
 
-    std::set<int> set = m_map.at(value);
+    std::set<int> set = m_map[value];
 
     // new value being inserted to map
     if (set.empty()){
@@ -37,6 +37,7 @@ void MaxHeap<T>::mapAdd(T value, int index) {
         m_map.emplace(std::pair<T, std::set<int>>(value, set));
     }
     else{
+        // is a set passed by refence?
         set.insert(index);
     }
 
