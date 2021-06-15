@@ -4,19 +4,31 @@
 
 using namespace std;
 
+
 int main(){
+
+    int arr[]{1,2,3};
+    MaxHeap<int> test(arr,3);
 
     map<int, set<int> > testMap;
 
+    std::set<int>& set = testMap[1];
 
-    set<int> ass = testMap[1];
-
-    if (ass.empty()){
-        cout << "Ass was empty\n";
+    if (set.empty()){
+        set.insert(1);
+        set.insert(2);
+        set.insert(3);
     }
-    ass.insert(2);
+    set.insert(6);
+    set.erase(3);
 
-    cout << testMap[1].;
+    testMap.emplace(std::pair<int, std::set<int>>(1, set));
+
+    for (int i : testMap[1]) {
+        cout << i << ' ';
+    }
+
+
 
 
     return 0;

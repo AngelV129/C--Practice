@@ -54,6 +54,7 @@ void HeapSort(std::array<int, SIZE>& array){
 template<std::size_t SIZE>
 void heapify(std::array<int, SIZE>& array,int  size, int i){
 
+
     // Find largest among root, left child and right child
     int largest = i;
     int left = 2 * i + 1;
