@@ -8,9 +8,15 @@ using namespace std;
 int main(){
 
     int arr[]{1,2,3};
-    MaxHeap<int> PQ(arr,3);
+    MaxHeap<int> pQ(arr,3);
 
-    cout << PQ.pop();
+    pQ.add(5);
+//    cout << pQ.pop() << '\n';
+
+    cout << "back in main\n";
+    cout << pQ.contains(2) << '\n';
+    cout <<  pQ.remove(2)<< '\n' ;
+    cout << pQ.contains(2) << '\n';
 
 
 

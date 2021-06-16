@@ -6,6 +6,7 @@
 #include <map>
 #include <vector>
 #include <optional>
+#include <iostream>
 
 template<typename T>
 class MaxHeap {
@@ -73,6 +74,21 @@ private:
     // Swap two nodes,  i & j, O(1)
     void swap(int i , int j);
 
+    void printMap(std::map<T, Set_Int>maps ){
+
+        for (auto& [k, v]: maps) {
+            std::cout << k <<" = ";
+            printSet(v);
+        }
+    }
+    void printSet(std::set<T>& set){
+
+        for(auto x: set)
+            std::cout << x << ' ';
+
+        std::cout <<'\n';
+    }
+
 };
 
 
@@ -96,8 +112,8 @@ MaxHeap<T>::MaxHeap(T *elems, size_t arrySize) {
     }
 
     // Heapify O(n)
-    for (int i = 0; i < (heapSize/2) -1 ; ++i) {
-        bubbleDown(i);
+    for (int i =std::max(0, (heapSize/2) -1); i >=0   ;i--){
+            bubbleDown(i);
     }
 }
 
@@ -106,10 +122,11 @@ void MaxHeap<T>::mapAdd(T value, int index) {
 
     std::set<int>& set = m_map[value];
 
+
     // new value being inserted to map
     if (set.empty()){
-        set.insert(value);
-        m_map.emplace(std::pair<T, Set_Int>(value, set));
+        set.insert(index);
+
     }
     else{
         // is a set passed by refence? NO So insrt and replace the old set.
@@ -128,7 +145,7 @@ void MaxHeap<T>::mapRemove(T value, int index) {
     set.erase(index);
 
     // erase the key from map if value is empty
-    if (set.size() == 0) m_map.erase(value);
+    if (set.empty()) m_map.erase(value);
 
 }
 
@@ -136,12 +153,12 @@ template<typename T>
 void MaxHeap<T>::bubbleDown(int index) {
 
     int heapSize = size();
-    // Left and right node
-    int left = 2 * index + 1;
-    int right = 2 * index + 2;
-    int greatest = left;
 
     while (true){
+        // Left and right node
+        int left = 2 * index + 1;
+        int right = 2 * index + 2;
+        int greatest = left;
 
         // Find which i larger, left or right.
         if (left < heapSize && right < heapSize && greater(right , left) ) greatest = right;
@@ -201,8 +218,11 @@ void MaxHeap<T>::mapSwap(T val1, T val2, int val1Index, int val2Index) {
     std::set<int>& set1 = m_map[val1];
     std::set<int>& set2 = m_map[val2];
 
-    set1.erase(val1);
-    set2.erase(val2);
+    set1.erase(val1Index);
+    set2.erase(val2Index);
+
+    set1.insert(val2Index);
+    set2.insert(val1Index);
 
 }
 
@@ -220,10 +240,11 @@ int MaxHeap<T>::mapGet(T value) {
 template<typename T>
 bool MaxHeap<T>::remove(T val) {
 
-    Set_Int& set = m_map.at(val);
-    if (set.empty()) return false;
+
+    if (!m_map.contains(val)) return false;
     else
     {
+        Set_Int& set = m_map.at(val);
         int removed_index = *set.rbegin();
         T removed_elemnt = removeAt(removed_index);
 
@@ -280,7 +301,7 @@ template<typename T>
 void MaxHeap<T>::add(T val) {
 
     heap.push_back(val);
-    m_map.insert({val, size() - 1});
+    mapAdd(val, size() - 1);
 
     bubbleUp(size() - 1);
 }
