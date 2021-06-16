@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Jose/Documents/C++/CS 136 C++/Practice/BST/first_bst/main.cpp" "C:/Users/Jose/Documents/C++/CS 136 C++/Practice/cmake-build-debug/BST/first_bst/CMakeFiles/firs_bst.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

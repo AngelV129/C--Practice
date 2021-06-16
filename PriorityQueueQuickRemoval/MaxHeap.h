@@ -5,7 +5,7 @@
 #include <set>
 #include <map>
 #include <vector>
-
+#include <optional>
 
 template<typename T>
 class MaxHeap {
@@ -76,7 +76,6 @@ private:
 };
 
 
-
 template<typename T>
 MaxHeap<T>::MaxHeap(int size) {
 
@@ -91,7 +90,7 @@ MaxHeap<T>::MaxHeap(T *elems, size_t arrySize) {
 
     // place all elements into the heap
     for (int i = 0; i < heapSize; ++i) {
-        heap.emplace_back(elems[i]);
+        heap.emplace_back(elems[i]); // or use push back
         mapAdd(elems[i], i);
 
     }
@@ -122,6 +121,15 @@ void MaxHeap<T>::mapAdd(T value, int index) {
 template<typename T>
 void MaxHeap<T>::mapRemove(T value, int index) {
 
+    // Grab the set from map
+    Set_Int& set = m_map[value];
+
+    // delete the specific index
+    set.erase(index);
+
+    // erase the key from map if value is empty
+    if (set.size() == 0) m_map.erase(value);
+
 }
 
 template<typename T>
@@ -145,6 +153,24 @@ void MaxHeap<T>::bubbleDown(int index) {
         index  = greatest;
     }
 
+}
+
+template<typename T>
+void MaxHeap<T>::bubbleUp(int index) {
+
+    // Grab index of the parent.
+    int parent = (index - 1)  /2;
+
+    // keep bubbling up until root is reached or parent is greater than the current.
+    while (index > 0 && greater(index, parent)){
+
+        // swap index with its parent
+        swap(index, parent);
+        index = parent;
+
+        // Get index of the next parent node.
+        parent = (index - 1 )/ 2;
+    }
 }
 
 template<typename T>
@@ -180,6 +206,84 @@ void MaxHeap<T>::mapSwap(T val1, T val2, int val1Index, int val2Index) {
 
 }
 
+template<typename T>
+int MaxHeap<T>::mapGet(T value) {
+
+    // get value from map
+    // throws exceptioon if does not exist
+    Set_Int& set = m_map.at(value);
+
+    return *set.rbegin();
+
+}
+
+template<typename T>
+bool MaxHeap<T>::remove(T val) {
+
+    Set_Int& set = m_map.at(val);
+    if (set.empty()) return false;
+    else
+    {
+        int removed_index = *set.rbegin();
+        T removed_elemnt = removeAt(removed_index);
+
+        return val == removed_elemnt;
+    }
+}
+
+template<typename T>
+T MaxHeap<T>::removeAt(int index) {
+
+    // check if heap is empty
+    if (isEmpty()) throw std::exception("Tried to remove from an empty queue.");
+
+    // swap root with the last element.
+    // get the value to be removed.
+    int lastElementIndex = size() - 1;
+    T removed_elem = heap.at(lastElementIndex);
+    swap(index, lastElementIndex);
+
+    // remove from both map and heap.
+    heap.pop_back();
+    mapRemove(removed_elem, lastElementIndex);
+
+    // If removing the last element
+    if (index == lastElementIndex) return removed_elem;
+
+    T elem = heap.at(index);
+
+    // try bubbledown
+    bubbleDown(index);
+    // bubble up if needed
+    if (heap.at(index) == elem) bubbleDown(index);
+
+    return removed_elem;
+}
+
+template<typename T>
+bool MaxHeap<T>::contains(T val) {
+
+    return m_map.contains(val);
+}
+
+template<typename T>
+T MaxHeap<T>::peek() {
+    return heap.at(0);
+}
+
+template<typename T>
+T MaxHeap<T>::pop() {
+    return removeAt(0);
+}
+
+template<typename T>
+void MaxHeap<T>::add(T val) {
+
+    heap.push_back(val);
+    m_map.insert({val, size() - 1});
+
+    bubbleUp(size() - 1);
+}
 
 
 #endif //PRACTICE_MAXHEAP_H
