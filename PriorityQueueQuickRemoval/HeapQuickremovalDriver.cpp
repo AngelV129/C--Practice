@@ -10,6 +10,8 @@ int main(){
     int arr[]{1,2,3};
     MaxHeap<int> PQ(arr,3);
 
+    cout << PQ.pop();
+
 
 
 //    map<int, set<int> > testMap;

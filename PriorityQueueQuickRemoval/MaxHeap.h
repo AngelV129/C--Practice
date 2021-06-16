@@ -90,13 +90,13 @@ MaxHeap<T>::MaxHeap(T *elems, size_t arrySize) {
 
     // place all elements into the heap
     for (int i = 0; i < heapSize; ++i) {
-        heap.emplace_back(elems[i]); // or use push back
+        heap.push_back(elems[i]); // or use push back
         mapAdd(elems[i], i);
 
     }
 
     // Heapify O(n)
-    for (int i = 0; i < std::max(0, (heapSize/2) -1) ; ++i) {
+    for (int i = 0; i < (heapSize/2) -1 ; ++i) {
         bubbleDown(i);
     }
 }
@@ -144,7 +144,7 @@ void MaxHeap<T>::bubbleDown(int index) {
     while (true){
 
         // Find which i larger, left or right.
-        if (left <= heapSize && greater(right , left) ) greatest = right;
+        if (left < heapSize && right < heapSize && greater(right , left) ) greatest = right;
 
         // Stop if out of bounds or early if no longer v=can bubble down.
         if (left >= heapSize || greater(index, greatest)) break;
@@ -177,7 +177,7 @@ template<typename T>
 bool MaxHeap<T>::greater(int i, int j) {
     T val1 = heap.at(i);
     T val2 = heap.at(j);
-    return val1 >= val2;
+    return val1 > val2;
 }
 
 template<typename T>
@@ -240,7 +240,7 @@ T MaxHeap<T>::removeAt(int index) {
     // swap root with the last element.
     // get the value to be removed.
     int lastElementIndex = size() - 1;
-    T removed_elem = heap.at(lastElementIndex);
+    T removed_elem = heap.at(index);
     swap(index, lastElementIndex);
 
     // remove from both map and heap.
@@ -255,7 +255,7 @@ T MaxHeap<T>::removeAt(int index) {
     // try bubbledown
     bubbleDown(index);
     // bubble up if needed
-    if (heap.at(index) == elem) bubbleDown(index);
+    if (heap.at(index) == elem) bubbleUp(index);
 
     return removed_elem;
 }
